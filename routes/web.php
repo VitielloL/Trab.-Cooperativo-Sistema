@@ -9,4 +9,6 @@ Route::post('/store',[LoginController::class,'store'])->name('store.user');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
-Route::middleware('auth')->group(function () {});
+Route::middleware('auth')->group(function () {
+
+});
