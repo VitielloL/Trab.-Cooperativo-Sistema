@@ -49,7 +49,7 @@
                         <label for="username" class="form-label text-secondary">Repita sua senha</label>
                     </div>
 
-                    <button type="submit" id="registrar" href='{{route('login')}}' class="w-100 mb-1 btn btn-primary btn-lg fst-italic">
+                    <button type="submit" id="register" href='{{route('login')}}' class="w-100 mb-1 btn btn-primary btn-lg fst-italic">
                         Cadastrar
                     </button>
                 </form>
@@ -63,3 +63,5 @@
 </div>
 </div>
 @endsection
+
+@vite(['resources/js/register.js'])
