@@ -35,10 +35,10 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-        <a style="text-transform:uppercase; font-weight:bold;" href='' class="nav-link">{{auth()->user()->name}}</a>
+            <a style="text-transform:uppercase; font-weight:bold;" class="nav-link">{{auth()->user()->name}}</a>
         </li>
     </ul>
 
@@ -89,6 +89,23 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item menu-open">
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href='{{route('home')}}' class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='{{route('profile')}}' class="nav-link">
+                                <i class="nav-icon fas fa-user-alt"></i>
+                                <p>Profile</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item menu-open">
                     <a href="#" class="nav-link active" style="background-color: #FFC476">
                     <i class="nav-icon fas fa-list-alt"></i>
                     <p>
@@ -103,7 +120,7 @@
                                 <p>Procurar Job</p>
                             </a>
                         </li>
-                        <li class="nav-item  menu-open">
+                        <li class="nav-item">
                             <a href='' class="nav-link">
                                 <i class="nav-icon fas fa-user-plus"></i>
                                 <p>Cadastrar Job</p>
