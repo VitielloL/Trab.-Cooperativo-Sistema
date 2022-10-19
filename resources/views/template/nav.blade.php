@@ -90,12 +90,12 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item menu-open">
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href='{{route('home')}}' class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>Home</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a href='{{route('profile')}}' class="nav-link">
                                 <i class="nav-icon fas fa-user-alt"></i>
@@ -115,7 +115,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href='' class="nav-link">
+                            <a href='{{route('home')}}' class="nav-link">
                                 <i class="nav-icon fas fa-search"></i>
                                 <p>Procurar Job</p>
                             </a>

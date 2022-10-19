@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('profissao')->nullable()->unique();
             $table->string('linkedin')->nullable()->unique();
             $table->string('instagram')->nullable()->unique();
+            $table->string('site')->nullable()->unique();
             $table->string('cep')->nullable(false);
             $table->string('estado')->nullable(false);
             $table->string('cidade')->nullable(false);

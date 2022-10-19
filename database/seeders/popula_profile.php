@@ -16,6 +16,7 @@ class popula_profile extends Seeder
             'github' => 'https://github.com/',
             'linkedin' => 'https://br.linkedin.com/',
             'instagram' => 'https://www.instagram.com/',
+            'site' => 'https://www.google.com/',
             'cep' => '20271-020',
             'estado' => 'Rio de Janeiro',
             'cidade' => 'RJ',

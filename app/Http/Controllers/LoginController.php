@@ -29,7 +29,7 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            return redirect()->route('home');
+            return redirect()->route('profile');
         }
         else{
             return redirect()->back()->with('danger','Email ou senha incorretos');
@@ -45,7 +45,7 @@ class LoginController extends Controller
         ];
 
         DB::table('users')->insert($property);
-        return redirect()->route('home');
+        return redirect()->route('profile');
     }
 
     public function logout()

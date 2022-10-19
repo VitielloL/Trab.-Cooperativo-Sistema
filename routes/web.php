@@ -19,6 +19,5 @@ Route::middleware('auth')->group(function () {
         Route::post('/store',[ProfileController::class,'store'])->name('profile.store');
         Route::post('/update',[ProfileController::class,'update'])->name('profile.update');
     });
-
 });
 

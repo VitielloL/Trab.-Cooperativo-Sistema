@@ -21,7 +21,7 @@
         <div class="form-group col-4">
             <div class="mt-3 mb-3 form-floating">
                 <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Digite seu cargo atual ou profissão" value="{{ $profileEntity ? $profileEntity->profissao : '' }}">
-                <label for="profissao" class="form-label text-secondary">Digite sua profissao</label>
+                <label for="profissao" class="form-label text-secondary">Digite seu cargo ou profissão</label>
             </div>
             <div class="mt-3 mb-3 form-floating">
                 <input type="text" class="form-control" id="github" name="github" placeholder="Digite seu github" value="{{ $profileEntity ? $profileEntity->github : '' }}">
@@ -34,6 +34,10 @@
             <div class="mt-3 mb-3 form-floating">
                 <input type="text" class="form-control" id="instagram" name="instagram" placeholder="Digite seu instagram" value="{{ $profileEntity ? $profileEntity->instagram : '' }}">
                 <label for="instagram" class="form-label text-secondary">Digite seu instagram</label>
+            </div>
+            <div class="mt-3 mb-3 form-floating">
+                <input type="text" class="form-control" id="site" name="site" placeholder="Digite seu site" value="{{ $profileEntity ? $profileEntity->site : '' }}">
+                <label for="site" class="form-label text-secondary">Digite seu site</label>
             </div>
         </div>
 

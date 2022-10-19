@@ -16,6 +16,7 @@ class Profile extends Model
         'profissao',
         'linkedin',
         'instagram',
+        'site',
         'cep',
         'estado',
         'cidade',
