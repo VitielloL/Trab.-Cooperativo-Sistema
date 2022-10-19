@@ -10,7 +10,7 @@
             'resources/css/bootstrap/bootstrap.min.css',
             'resources/adminLTE/css/adminlte.min.css',
             'resources/plugins/fontawesome-free/css/all.min.css',
-            'resources/puglins/overlayScrollbars/css/OverlayScrollbars.min.css',
+            'resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
             'resources/plugins/jquery/jquery.min.js',
             'resources/plugins/bootstrap/js/bootstrap.bundle.min.js',
             'resources/adminLTE/js/adminlte.js',
