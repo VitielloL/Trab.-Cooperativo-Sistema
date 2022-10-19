@@ -11,6 +11,7 @@
             rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous">
+            <link rel="icon" type="image/png" href="{{ asset('storage/logo.png') }}" sizes="16x16" />
     </head>
 
     <body>
