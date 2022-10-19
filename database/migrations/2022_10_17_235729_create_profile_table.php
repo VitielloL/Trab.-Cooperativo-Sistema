@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->unique();
             $table->string('github')->nullable()->unique();
+            $table->string('profissao')->nullable()->unique();
             $table->string('linkedin')->nullable()->unique();
             $table->string('instagram')->nullable()->unique();
             $table->string('cep')->nullable(false);
             $table->string('estado')->nullable(false);
             $table->string('cidade')->nullable(false);
-            $table->string('logadouro')->nullable(false);
+            $table->string('logradouro')->nullable(false);
             $table->string('numero')->nullable(false);
             $table->string('complemento')->nullable();
             $table->string('foto')->nullable();

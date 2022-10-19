@@ -99,7 +99,7 @@
                         <li class="nav-item">
                             <a href='{{route('profile')}}' class="nav-link">
                                 <i class="nav-icon fas fa-user-alt"></i>
-                                <p>Profile</p>
+                                <p>Perfil</p>
                             </a>
                         </li>
                     </ul>

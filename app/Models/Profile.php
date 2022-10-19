@@ -13,12 +13,13 @@ class Profile extends Model
     protected $fillable = [
         'user_id',
         'github',
+        'profissao',
         'linkedin',
         'instagram',
         'cep',
         'estado',
         'cidade',
-        'logadouro',
+        'logradouro',
         'numero',
         'complemento',
         'foto'

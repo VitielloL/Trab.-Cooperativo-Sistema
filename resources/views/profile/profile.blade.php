@@ -20,6 +20,10 @@
         </div>
         <div class="form-group col-4">
             <div class="mt-3 mb-3 form-floating">
+                <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Digite seu cargo atual ou profissão" value="{{ $profileEntity ? $profileEntity->profissao : '' }}">
+                <label for="profissao" class="form-label text-secondary">Digite sua profissao</label>
+            </div>
+            <div class="mt-3 mb-3 form-floating">
                 <input type="text" class="form-control" id="github" name="github" placeholder="Digite seu github" value="{{ $profileEntity ? $profileEntity->github : '' }}">
                 <label for="github" class="form-label text-secondary">Digite seu github</label>
             </div>
@@ -47,8 +51,8 @@
                 <label for="cidade" class="form-label text-secondary">Digite seu cidade</label>
             </div>
             <div class="mt-3 mb-3 form-floating">
-                <input type="text" class="form-control" id="logadouro" name="logadouro" placeholder="Digite seu logadouro" value="{{ $profileEntity ? $profileEntity->logadouro : '' }}" required>
-                <label for="logadouro" class="form-label text-secondary">Digite seu logadouro</label>
+                <input type="text" class="form-control" id="logradouro" name="logradouro" placeholder="Digite seu logradouro" value="{{ $profileEntity ? $profileEntity->logradouro : '' }}" required>
+                <label for="logradouro" class="form-label text-secondary">Digite seu logradouro</label>
             </div>
             <div class="mt-3 mb-3 form-floating">
                 <input type="number" class="form-control" id="numero" name="numero" placeholder="Digite seu numero" value="{{ $profileEntity ? $profileEntity->numero : '' }}" required>
