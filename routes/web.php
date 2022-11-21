@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Base\Http\Controllers\HomeController;
+use App\Base\Http\Controllers\LoginController;
+use App\Job\Http\Controllers\JobController;
+use App\Profile\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HomeController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/auth',[LoginController::class,'auth'])->name('auth.user');
@@ -19,5 +20,13 @@ Route::middleware('auth')->group(function () {
         Route::post('/store',[ProfileController::class,'store'])->name('profile.store');
         Route::post('/update',[ProfileController::class,'update'])->name('profile.update');
     });
+
+    Route::prefix('job')->group(function ( ) {
+        Route::get('/',[JobController::class,'index']);
+        Route::post('/store',[JobController::class,'store']);
+        Route::post('/update/{id}',[JobController::class,'update']);
+        Route::delete('/delete/{id}',[JobController::class,'delete']);
+    });
 });
+
 
