@@ -45,7 +45,7 @@ class LoginController extends Controller
         ];
 
         DB::table('users')->insert($property);
-        return redirect()->route('profile');
+        return redirect()->route('login');
     }
 
     public function logout()
