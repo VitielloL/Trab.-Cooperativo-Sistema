@@ -116,15 +116,21 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href='{{route('home')}}' class="nav-link">
+                            <a href='{{route('jobs')}}' class="nav-link">
                                 <i class="nav-icon fas fa-search"></i>
                                 <p>Procurar Job</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href='' class="nav-link">
+                            <a href='{{route('jobs.create')}}' class="nav-link">
                                 <i class="nav-icon fas fa-user-plus"></i>
                                 <p>Cadastrar Job</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='' class="nav-link">
+                                <i class="nav-icon fas fa-desktop"></i>
+                                <p>Meus Jobs</p>
                             </a>
                         </li>
                     </ul>

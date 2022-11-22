@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class popula_job_types extends Seeder
+class JobTypesSeeder extends Seeder
 {
     public function run()
     {

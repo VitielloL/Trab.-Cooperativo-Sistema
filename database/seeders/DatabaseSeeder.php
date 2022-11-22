@@ -9,9 +9,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this->call(popula_users::class);
-        $this->call(popula_profiles::class);
-        $this->call(popula_job_types::class);
-        $this->call(popula_jobs::class);
+        $this->call(UsersSeeder::class);
+        $this->call(ProfilesSeeder::class);
+        $this->call(JobTypesSeeder::class);
+        $this->call(JobsSeeder::class);
     }
 }

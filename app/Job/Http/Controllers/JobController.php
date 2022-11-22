@@ -27,26 +27,45 @@ class JobController extends Controller
         $baseInfo = array(
             'jobsEntity' => $jobsEntity
         );
-
-        dd('infex feito');
-        //return view('', $baseInfo);
+        return view('jobs.index', $baseInfo);
     }
 
-    public function store(JobRequest $request)
+    public function show(int $id) {
+        $jobsEntity = $this->jobRepository->find($id);
+
+        if (!empty($jobsEntity)) {
+            return view('jobs.showMore')->with('jobsEntity', $jobsEntity);
+        } else {
+            return redirect()->route('jobs');
+        }
+    }
+    public function create () {
+        return view('jobs.create');
+    }
+
+    public function store(Request $request)
     {
-        dd($request->validated());
-        //$idUser = auth()->user()->id;
+        $idUser = auth()->user()->id;
         $newValues = $request->except('_token');
-        //$newValues['user_id'] = $idUser;
+        $newValues['user_id'] = $idUser;
 
         $newProperty = new Job($newValues);
         $newProperty->save();
 
-        dd('store feito');
-        //return redirect()->route('');
+        return redirect()->route('jobs');
     }
 
-    public function update(JobRequest $request, int $idJob)
+    public function edit(int $id) {
+        $jobsEntity = $this->jobRepository->find($id);
+
+        if (!empty($jobsEntity)) {
+            return view('jobs.edit')->with('jobsEntity', $jobsEntity);
+        } else {
+            return redirect()->route('jobs');
+        }
+    }
+
+    public function update(Request $request)
     {
         $jobEntity = $this->jobRepository->find($idJob);
         $infos = json_decode($request->getContent(), true);
@@ -57,16 +76,12 @@ class JobController extends Controller
 
         $jobEntity->save();
 
-        dd('update feito');
-        //return redirect()->route('');
+        return redirect()->route('jobs');
     }
-
 
     public function delete(int $idJob)
     {
         $this->jobRepository->delete($idJob);
-
-        dd('delete feito');
-        //return redirect()->route('');
+        return redirect()->route('jobs');
     }
 }

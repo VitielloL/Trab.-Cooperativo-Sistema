@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class popula_jobs extends Seeder
+class JobsSeeder extends Seeder
 {
     public function run()
     {
@@ -14,7 +14,7 @@ class popula_jobs extends Seeder
             'job_type_id' => 1,
             'titulo' => 'teste',
             'descricao' => 'teste',
-            'valor_hora' => 10,
+            'valor_hora' => '10',
         ]);
     }
 }

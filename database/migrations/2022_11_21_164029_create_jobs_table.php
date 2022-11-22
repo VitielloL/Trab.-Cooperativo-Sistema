@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('job_type_id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->integer('valor_hora');
+            $table->string('valor_hora');
         });
     }
 
