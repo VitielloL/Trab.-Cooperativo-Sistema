@@ -25,10 +25,9 @@
                     $linkReadMore = url('/job/showMore/' . $job->id);
                     $linkEditItem = url ('/job/edit/' . $job->id);
                 @endphp
-
                 <tr>
                     <td style="vertical-align:middle">{{$job->titulo}}</td>
-                    <td style="vertical-align:middle">{{$job->job_type_id}}</td>
+                    <td style="vertical-align:middle">{{$job->job_type->nome}}</td>
                     <td style="vertical-align:middle">{{$job->descricao}}</td>
                     <td style="vertical-align:middle">{{$job->valor_hora}}</td>
                     <td>

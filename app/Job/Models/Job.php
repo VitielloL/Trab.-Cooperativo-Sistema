@@ -25,8 +25,8 @@ class Job extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function job_type(): HasOne
+    public function job_type(): BelongsTo
     {
-        return $this->hasOne(JobType::class);
+        return $this->belongsTo(JobType::class);
     }
 }

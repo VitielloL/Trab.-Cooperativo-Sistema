@@ -5,28 +5,33 @@ namespace App\Job\Http\Controllers;
 use App\Base\Http\Controllers\Controller;
 use App\Job\Models\Job;
 use App\Job\Models\JobRepositoryInterface;
+use App\Job\Models\JobTypeRepositoryInterface;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
     private JobRepositoryInterface $jobRepository;
 
+    private JobTypeRepositoryInterface $jobTypeRepository;
+
     public function __construct
     (
-        JobRepositoryInterface $jobRepository
+        JobRepositoryInterface $jobRepository,
+        JobTypeRepositoryInterface $jobTypeRepository
     )
     {
         $this->jobRepository = $jobRepository;
+        $this->jobTypeRepository = $jobTypeRepository;
     }
 
     public function index()
     {
         $jobsEntity = $this->jobRepository->all();
-
-        $baseInfo = array(
+        $jobTypesEntity = $this->jobTypeRepository->all();
+        $infos = array(
             'jobsEntity' => $jobsEntity
         );
-        return view('jobs.index', $baseInfo);
+        return view('jobs.index')->with($infos);
     }
 
     public function my() {
@@ -72,9 +77,14 @@ class JobController extends Controller
     public function edit(int $idJob) {
         $jobEntity = $this->jobRepository->find($idJob);
         $this->authorize('update', $jobEntity);
-
+        $jobTypesEntity = $this->jobTypeRepository->all();
         if (!empty($jobEntity)) {
-            return view('jobs.edit')->with('jobsEntity', $jobEntity);
+            $infos = array
+                (
+                    'jobTypesEntity' => $jobTypesEntity,
+                    'jobsEntity' => $jobEntity
+                );
+            return view('jobs.edit')->with($infos);
         } else {
             return redirect()->route('jobs');
         }

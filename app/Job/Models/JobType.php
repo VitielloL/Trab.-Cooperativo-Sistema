@@ -4,6 +4,7 @@ namespace App\Job\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class JobType extends Model
 {
@@ -14,8 +15,8 @@ class JobType extends Model
         'nome'
     ];
 
-    public function job(): BelongsTo
+    public function job(): HasOne
     {
-        return $this->belongsTo(Job::class);
+        return $this->hasOne(Job::class);
     }
 }

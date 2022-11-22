@@ -21,6 +21,15 @@ class JobTypesSeeder extends Seeder
             ],
             [
                 'nome' => 'Marceneiro'
+            ],
+            [
+                'nome' => 'Artista'
+            ],
+            [
+                'nome' => 'Musico'
+            ],
+            [
+                'nome' => 'Outros'
             ]
         ];
 
