@@ -10,15 +10,15 @@
                 <label class="form-label" for="titulo">Titulo: </label>
                 <input type="text" class="form-control" id="titulo" name="titulo" value="{{$jobEntity->titulo}}" disabled>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <label class="form-label" for="job_type_id">Tipo de Job:</label>
-                <input type="number" class="form-control" id="job_type_id" name="job_type_id" value="{{$jobEntity->job_type->nome}}" disabled>
+                <input type="text" class="form-control" id="job_type_id" name="job_type_id" value="{{$jobEntity->job_type->nome}}" disabled>
             </div>
             <div class="col-md-4">
                 <label class="form-label" for="descricao">Descrição: </label>
                 <input type="text" class="form-control" id="descricao" name="descricao" value="{{$jobEntity->descricao}}" disabled>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <label class="form-label" for="valor">Valor hora:</label>
                 <input type="text" class="form-control" id="valor" name="valor_hora" value="{{$jobEntity->valor_hora}}" disabled>
             </div>
