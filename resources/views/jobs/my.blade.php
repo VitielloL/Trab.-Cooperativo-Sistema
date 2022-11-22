@@ -25,7 +25,7 @@
 
                     <tr>
                         <td style="vertical-align:middle">{{$jobs->titulo}}</td>
-                        <td style="vertical-align:middle">{{$jobs->job_type_id}}</td>
+                        <td style="vertical-align:middle">{{$jobs->job_type->nome}}</td>
                         <td style="vertical-align:middle">{{$jobs->descricao}}</td>
                         <td style="vertical-align:middle">{{$jobs->valor_hora}}</td>
                         <td>
