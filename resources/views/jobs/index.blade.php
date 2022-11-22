@@ -24,7 +24,6 @@
                 @php
                     $linkReadMore = url('/job/showMore/' . $job->id);
                     $linkEditItem = url ('/job/edit/' . $job->id);
-                    // $linkRemoveItem = url ('/job/delete/' . $job->id);
                 @endphp
 
                 <tr>
@@ -35,10 +34,9 @@
                     <td>
                         <div class="d-flex">
                             <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
-                            @if (auth()->user()->id === $job->id)
+                            @if (auth()->user()->id === $job->user_id)
                                 <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white"><i class="fa fa-pen mr-1 mb-0" aria-hidden="true"></i>Editar</a>
                             @endif
-                            {{-- <a href={{$linkRemoveItem}} class="btn btn-danger mr-2"><i class="fa fa-trash mr-1 mb-0" aria-hidden="true"></i>Excluir</a> --}}
                         </div>
                     </td>
                 </tr>
