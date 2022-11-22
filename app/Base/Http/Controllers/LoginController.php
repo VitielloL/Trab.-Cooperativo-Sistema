@@ -13,6 +13,11 @@ class LoginController extends Controller
         return view('login.login');
     }
 
+    public function landing()
+    {
+        return view('landing-page.index');
+    }
+
     public function register()
     {
         return view('login.register');

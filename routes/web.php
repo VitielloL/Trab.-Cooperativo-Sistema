@@ -6,7 +6,8 @@ use App\Job\Http\Controllers\JobController;
 use App\Profile\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/', [LoginController::class, 'landing'])->name('landing');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/auth',[LoginController::class,'auth'])->name('auth.user');
 Route::post('/store',[LoginController::class,'store'])->name('store.user');
 Route::get('/register', [LoginController::class, 'register'])->name('register');

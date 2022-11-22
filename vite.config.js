@@ -5,6 +5,7 @@ export default defineConfig({
     plugins: [
         laravel([
             'resources/css/app.css',
+            'resources/css/landing.css',
             'resources/js/app.js',
             'resources/js/register.js',
             'resources/css/bootstrap/bootstrap.min.css',
