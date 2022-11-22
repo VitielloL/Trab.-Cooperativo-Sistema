@@ -20,23 +20,25 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ( $jobsEntity as $jobs )
+            @foreach ( $jobsEntity as $job )
                 @php
-                    $linkReadMore = url('/job/showMore/' . $jobs->id);
-                    $linkEditItem = url ('/job/edit/' . $jobs->id);
-                    $linkRemoveItem = url ('/job/delete/' . $jobs->id);
+                    $linkReadMore = url('/job/showMore/' . $job->id);
+                    $linkEditItem = url ('/job/edit/' . $job->id);
+                    // $linkRemoveItem = url ('/job/delete/' . $job->id);
                 @endphp
 
                 <tr>
-                    <td style="vertical-align:middle">{{$jobs->titulo}}</td>
-                    <td style="vertical-align:middle">{{$jobs->job_type_id}}</td>
-                    <td style="vertical-align:middle">{{$jobs->descricao}}</td>
-                    <td style="vertical-align:middle">{{$jobs->valor_hora}}</td>
+                    <td style="vertical-align:middle">{{$job->titulo}}</td>
+                    <td style="vertical-align:middle">{{$job->job_type_id}}</td>
+                    <td style="vertical-align:middle">{{$job->descricao}}</td>
+                    <td style="vertical-align:middle">{{$job->valor_hora}}</td>
                     <td>
                         <div class="d-flex">
                             <a href={{$linkReadMore}} class="btn btn-info mr-2"><i class="fa fa-eye mr-1 mb-0" aria-hidden="true"></i> Ver Mais</a>
-                            <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white"><i class="fa fa-pen mr-1 mb-0" aria-hidden="true"></i>Editar</a>
-                            <a href={{$linkRemoveItem}} class="btn btn-danger mr-2"><i class="fa fa-trash mr-1 mb-0" aria-hidden="true"></i>Excluir</a>
+                            @if (auth()->user()->id === $job->id)
+                                <a href={{$linkEditItem}} class="btn btn-warning mr-2" style="color:white"><i class="fa fa-pen mr-1 mb-0" aria-hidden="true"></i>Editar</a>
+                            @endif
+                            {{-- <a href={{$linkRemoveItem}} class="btn btn-danger mr-2"><i class="fa fa-trash mr-1 mb-0" aria-hidden="true"></i>Excluir</a> --}}
                         </div>
                     </td>
                 </tr>
