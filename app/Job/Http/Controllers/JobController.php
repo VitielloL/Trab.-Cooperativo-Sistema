@@ -65,10 +65,11 @@ class JobController extends Controller
         }
     }
 
-    public function update(Request $request)
+    public function update(Request $request, int $idJob)
     {
         $jobEntity = $this->jobRepository->find($idJob);
-        $infos = json_decode($request->getContent(), true);
+        $infos = $request->except('_token');
+        //$infos = json_decode($newValues, true);
 
         foreach ($infos as $key => $info) {
             $jobEntity->$key = $info;
