@@ -40,10 +40,10 @@ class JobController extends Controller
     }
 
     public function show(int $id) {
-        $jobsEntity = $this->jobRepository->find($id);
-
-        if (!empty($jobsEntity)) {
-            return view('jobs.showMore')->with('jobsEntity', $jobsEntity);
+        $jobEntity = $this->jobRepository->find($id);
+        $profile = $jobEntity->user->profile;
+        if (!empty($jobEntity)) {
+            return view('jobs.showMore')->with('jobEntity', $jobEntity);
         } else {
             return redirect()->route('jobs');
         }
