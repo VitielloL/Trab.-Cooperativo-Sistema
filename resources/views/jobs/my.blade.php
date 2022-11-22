@@ -3,7 +3,7 @@
 @section("conteudo")
     <div class="pt-5 pl-3 pr-3">
         <div class="d-flex justify-content-between">
-            <h2 class="fst-italic fw-bold">Lista de Jobs</h2>
+            <h2 class="fst-italic fw-bold">Meus Jobs</h2>
         </div>
         @if (!empty($jobsEntity))
             <table class="table table-light table-striped ">

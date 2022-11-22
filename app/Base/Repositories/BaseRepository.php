@@ -38,4 +38,15 @@ class BaseRepository implements BaseRepositoryInterface
         $model = $this->find($id);
         $model->delete();
     }
+
+    public function findBy(array $filters): Collection
+    {
+        $query = $this->_model::query();
+
+        foreach ($filters as $key => $filter) {
+            $query->where($key, $filter);
+        }
+
+        return $query->get();
+    }
 }
