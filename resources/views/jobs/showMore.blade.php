@@ -38,7 +38,7 @@
             </div>
             <div class="col-md-3">
                 <label class="form-label">Github:</label>
-                <input type="number" class="form-control" value="{{$jobEntity->user->profile->github}}" disabled>
+                <input type="text" class="form-control" value="{{$jobEntity->user->profile->github}}" disabled>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Linkedin:</label>
