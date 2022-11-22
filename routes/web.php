@@ -1,6 +1,5 @@
 <?php
 
-use App\Base\Http\Controllers\HomeController;
 use App\Base\Http\Controllers\LoginController;
 use App\Job\Http\Controllers\JobController;
 use App\Profile\Http\Controllers\ProfileController;
@@ -22,10 +21,13 @@ Route::middleware('auth')->group(function () {
     Route::prefix('job')->group(function ( ) {
         Route::get('/',[JobController::class,'index'])->name('jobs');
         Route::get('/create', [JobController::class, 'create'])->name('jobs.create');
+
         Route::get('/showMore/{id}',[JobController::class,'show'])->name('jobs.show');
         Route::post('/store',[JobController::class,'store'])->name('jobs.store');
-        Route::put('/update/{id}',[JobController::class,'update'])->name('jobs.update');
+
         Route::get('/edit/{id}',[JobController::class,'edit'])->name('jobs.edit');
+        Route::post('/update/{id}',[JobController::class,'update'])->name('jobs.update');
+
         Route::get('/delete/{id}',[JobController::class,'delete'])->name('jobs.delete');
     });
 });
