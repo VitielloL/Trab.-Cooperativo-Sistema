@@ -3,7 +3,6 @@
 namespace App\Job\Http\Controllers;
 
 use App\Base\Http\Controllers\Controller;
-use App\Job\Http\Requests\JobRequest;
 use App\Job\Models\Job;
 use App\Job\Models\JobRepositoryInterface;
 use Illuminate\Http\Request;
@@ -30,6 +29,16 @@ class JobController extends Controller
         return view('jobs.index', $baseInfo);
     }
 
+    public function my() {
+        $jobsEntity = $this->jobRepository->all();
+
+        if (!empty($jobsEntity)) {
+            return view('jobs.my')->with('jobsEntity', $jobsEntity);
+        } else {
+            return redirect()->route('jobs');
+        }
+    }
+
     public function show(int $id) {
         $jobsEntity = $this->jobRepository->find($id);
 
@@ -39,6 +48,7 @@ class JobController extends Controller
             return redirect()->route('jobs');
         }
     }
+
     public function create () {
         return view('jobs.create');
     }
@@ -55,11 +65,12 @@ class JobController extends Controller
         return redirect()->route('jobs');
     }
 
-    public function edit(int $id) {
-        $jobsEntity = $this->jobRepository->find($id);
+    public function edit(int $idJob) {
+        $jobEntity = $this->jobRepository->find($idJob);
+        $this->authorize('update', $jobEntity);
 
-        if (!empty($jobsEntity)) {
-            return view('jobs.edit')->with('jobsEntity', $jobsEntity);
+        if (!empty($jobEntity)) {
+            return view('jobs.edit')->with('jobsEntity', $jobEntity);
         } else {
             return redirect()->route('jobs');
         }
@@ -67,21 +78,17 @@ class JobController extends Controller
 
     public function update(Request $request, int $idJob)
     {
-        $jobEntity = $this->jobRepository->find($idJob);
         $infos = $request->except('_token');
-        //$infos = json_decode($newValues, true);
-
-        foreach ($infos as $key => $info) {
-            $jobEntity->$key = $info;
-        }
-
-        $jobEntity->save();
+        $this->jobRepository->update($idJob, $infos);
 
         return redirect()->route('jobs');
     }
 
-    public function delete(int $idJob)
+    public function destroy(int $idJob)
     {
+        $jobEntity = $this->jobRepository->find($idJob);
+        $this->authorize('destroy', $jobEntity);
+
         $this->jobRepository->delete($idJob);
         return redirect()->route('jobs');
     }

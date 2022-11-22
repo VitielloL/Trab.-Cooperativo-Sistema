@@ -23,13 +23,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/',[JobController::class,'index'])->name('jobs');
         Route::get('/create', [JobController::class, 'create'])->name('jobs.create');
 
+        Route::get('/my',[JobController::class,'my'])->name('jobs.my');
+
         Route::get('/showMore/{id}',[JobController::class,'show'])->name('jobs.show');
         Route::post('/store',[JobController::class,'store'])->name('jobs.store');
 
         Route::get('/edit/{id}',[JobController::class,'edit'])->name('jobs.edit');
         Route::post('/update/{id}',[JobController::class,'update'])->name('jobs.update');
 
-        Route::get('/delete/{id}',[JobController::class,'delete'])->name('jobs.delete');
+        Route::get('/delete/{id}',[JobController::class,'destroy'])->name('jobs.delete');
     });
 });
 

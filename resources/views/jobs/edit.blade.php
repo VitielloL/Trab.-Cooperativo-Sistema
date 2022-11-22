@@ -3,7 +3,7 @@
 @section("conteudo")
 <div class="pt-5 pr-3 pl-3">
     <h2 class="fw-bold fst-italic" style="margin-bottom:15px;"> Editar Job </h2>
-    <form action='{{route('jobs.update', ['id'=> 1])}}' method="POST">
+    <form action='{{route('jobs.update', ['id'=> $jobsEntity->id])}}' method="POST">
         @csrf
         <p class="text-center table-warning fw-bold fst-italic">Dados do Job</p>
 
