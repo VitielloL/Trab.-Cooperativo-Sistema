@@ -27,16 +27,15 @@ class JobController extends Controller
     public function index()
     {
         $jobsEntity = $this->jobRepository->all();
-        $jobTypesEntity = $this->jobTypeRepository->all();
-        $infos = array(
-            'jobsEntity' => $jobsEntity
-        );
-        return view('jobs.index')->with($infos);
+
+        return view('jobs.index')->with('jobsEntity', $jobsEntity);
     }
 
     public function my() {
         $jobsEntity = $this->jobRepository->findBy([
-            'user_id' => auth()->user()->id
+            'exact' => [
+                'user_id' => auth()->user()->id,
+            ]
         ]);
 
         if (!empty($jobsEntity)) {
@@ -48,8 +47,8 @@ class JobController extends Controller
         }
     }
 
-    public function show(int $id) {
-        $jobEntity = $this->jobRepository->find($id);
+    public function show(int $idJob) {
+        $jobEntity = $this->jobRepository->find($idJob);
 
         if (!empty($jobEntity)) {
             return view('jobs.showMore')->with('jobEntity', $jobEntity);
@@ -79,11 +78,10 @@ class JobController extends Controller
         $this->authorize('update', $jobEntity);
         $jobTypesEntity = $this->jobTypeRepository->all();
         if (!empty($jobEntity)) {
-            $infos = array
-                (
-                    'jobTypesEntity' => $jobTypesEntity,
-                    'jobsEntity' => $jobEntity
-                );
+            $infos = array(
+                'jobTypesEntity' => $jobTypesEntity,
+                'jobsEntity' => $jobEntity
+            );
             return view('jobs.edit')->with($infos);
         } else {
             return redirect()->route('jobs');
@@ -105,5 +103,20 @@ class JobController extends Controller
 
         $this->jobRepository->delete($idJob);
         return redirect()->route('jobs');
+    }
+
+    public function search(Request $request)
+    {
+        $titulo = $request->get('titulo');
+        $descricao = $request->get('descricao');
+
+        $jobsEntity = $this->jobRepository->findBy([
+            'similar' => [
+                'titulo' => $titulo,
+                'descricao' => $descricao
+            ]
+        ]);
+
+        return view('jobs.index')->with('jobsEntity', $jobsEntity);
     }
 }

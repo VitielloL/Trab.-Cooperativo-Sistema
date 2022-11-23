@@ -2,14 +2,23 @@
 
 @section("conteudo")
 <div class="pt-5 pl-3 pr-3">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-4">
         <h2 class="fst-italic fw-bold">Lista de Jobs</h2>
         <div class="pr-5">
             <a href='{{route('jobs.create')}}' class='btn btn-success' style="height:40px;"><i class="fas fa-plus mr-1"></i> Cadastrar</a>
         </div>
     </div>
+    <form action='{{route('jobs.search')}}' method="GET">
+        <div class="input-group">
+            <input type="text" name="titulo" class="form-control rounded" placeholder="Busque Pelo Titulo" aria-label="Search" aria-describedby="search-addon" />
+            <input type="text" name="descricao" class="form-control rounded" placeholder="Busque Pela Descricao" aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-success">
+                Pesquisar <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
     @if (!empty($jobsEntity))
-    <table class="table table-light table-striped ">
+    <table class="table table-light table-striped mt-4">
         <thead class="table-warning">
             <tr>
                 <td>Título</td>

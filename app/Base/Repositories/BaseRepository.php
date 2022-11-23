@@ -43,8 +43,16 @@ class BaseRepository implements BaseRepositoryInterface
     {
         $query = $this->_model::query();
 
-        foreach ($filters as $key => $filter) {
-            $query->where($key, $filter);
+        foreach ($filters as $keyType => $types) {
+            foreach ($types as $key => $filter) {
+                if ($keyType == 'exact') {
+                    $query->where($key, $filter);
+                }
+                else if ($keyType == 'similar') {
+                    $query->where($key, 'like', '%' . $filter . '%');
+
+                }
+            }
         }
 
         return $query->get();
