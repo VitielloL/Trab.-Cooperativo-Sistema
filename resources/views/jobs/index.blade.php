@@ -10,8 +10,8 @@
     </div>
     <form action='{{route('jobs.search')}}' method="GET">
         <div class="input-group">
-            <input type="text" name="titulo" class="form-control rounded" placeholder="Busque Pelo Titulo" aria-label="Search" aria-describedby="search-addon" />
-            <input type="text" name="descricao" class="form-control rounded" placeholder="Busque Pela Descricao" aria-label="Search" aria-describedby="search-addon" />
+            <input type="text" name="titulo" class="form-control rounded mr-2" placeholder="Busque pelo titulo" aria-label="Search" aria-describedby="search-addon" />
+            <input type="text" name="descricao" class="form-control rounded" placeholder="Busque pela descrição" aria-label="Search" aria-describedby="search-addon" />
             <button type="submit" class="btn btn-success">
                 Pesquisar <i class="fas fa-search"></i>
             </button>
