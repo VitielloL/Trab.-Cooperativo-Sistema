@@ -63,7 +63,7 @@ body {
 .img-landing {
     height: 80%;
     /* border-radius: 100%; */
-    box-shadow: 1px 5px 30px rgb(185, 77, 31);;
+    box-shadow: 1px 5px 30px rgb(185, 77, 31);
 }
 /* ---------  -------------*/
 
@@ -76,6 +76,9 @@ body {
 a {
     text-decoration: none;
     color: white;
+}
+a:hover {
+    color:rgb(185, 77, 31);
 }
 
 i {

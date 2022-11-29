@@ -41,8 +41,8 @@
                     Nossa plataforma ajuda tanto o empregado quanto o empregador, facilitando a sua oferta de serviços, assim como a contratação desses jobs.
                 </p>
                 <p>
-                    Devido à pandemia o <span class="fst-italic fst-bold">homeoffice</span> ficou muito mais visado e o desemprego em diversas áreas que não são possíveis
-                    atuarem em <span class="fst-italic fst-bold">homeoffice</span> e as áreas que são possiveis ouve um crescimento significativamente, com a
+                    Devido à pandemia o <span class="fst-italic fst-bold">homeoffice</span> ficou muito mais visado e o desemprego aumentou em diversas áreas que não
+                    são possíveis atuarem em <span class="fst-italic fst-bold">homeoffice</span> e as áreas que são possiveis ouve um crescimento significativamente, com a
                     <span class="title-logo">Job Free</span> queremos fomentar mais ainda o trabalho <span class="fst-italic fst-bold">homeoffice</span>, temos foco nas
                     áreas que possam ser desenvolvidas em casa: Programação, design, música, assessorias em geral, advocacia dentre outros. Porém, também temos focos em
                     serviços que possam ser de entrega presencial como: pintura, marcearia, construção de obras dentre outros também.
@@ -66,7 +66,7 @@
                 <a class="fst-italic" href="https://github.com/VitielloL">Lucas Vitiello</a> e
                 <a class="fst-italic" href="https://github.com/RodrigoBCastro"> Rodrigo Castro </a>
                 <br>
-                © 2020 Copyright: Job-free, all rights reserved
+                © 2020 Copyright: <span class="title-logo">Job Free</span>, all rights reserved
             </span>
         </div>
     </footer>
