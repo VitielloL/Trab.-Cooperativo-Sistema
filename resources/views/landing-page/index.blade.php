@@ -17,6 +17,7 @@
     <!-- CSS -->
     @vite([
             'resources/css/bootstrap/bootstrap.min.css',
+            'resources/plugins/fontawesome-free/css/all.min.css',
             'resources/css/app.css',
             'resources/css/landing.css',
             'resources/js/app.js'
@@ -62,7 +63,7 @@
     <footer class="bg-dark text-center text-white footer-area">
         <div class="text-center" style="background-color: rgba(0, 0, 0, 0.2);">
             <span>
-                Desenvolvido com <i class="bi bi-heart-fill"></i> <i class="fa-solid fa-heart"></i> por
+                Desenvolvido com <i class="fas fa-heart fa-fw"></i> por
                 <a class="fst-italic" href="https://github.com/VitielloL">Lucas Vitiello</a> e
                 <a class="fst-italic" href="https://github.com/RodrigoBCastro"> Rodrigo Castro </a>
                 <br>
