@@ -67,7 +67,7 @@
                 <a class="fst-italic" href="https://github.com/VitielloL">Lucas Vitiello</a> e
                 <a class="fst-italic" href="https://github.com/RodrigoBCastro"> Rodrigo Castro </a>
                 <br>
-                © 2020 Copyright: <span class="title-logo">Job Free</span>, all rights reserved
+                © 2022 Copyright: <span class="title-logo">Job Free</span>, all rights reserved
             </span>
         </div>
     </footer>
