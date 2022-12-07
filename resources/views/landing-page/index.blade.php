@@ -56,7 +56,7 @@
                 </h5>
             </div>
             <div class="ladoB">
-                <img class="img-landing" src="{{ asset('storage/imglanding1.png') }}" >
+                <img class="img-landing" src="{{ asset('storage/landing1.webp') }}" >
             </div>
         </div>
     </main>
