@@ -1,16 +1,20 @@
 @extends('template.nav')
 
 @section("conteudo")
-<form action="{{ $profileEntity ? route('profile.update') : route('profile.store') }}" method="POST">
+<form action="{{ $profileEntity ? route('profile.update') : route('profile.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center">
         <img  class="img-profile" src="
         {{ $profileEntity
             ? $profileEntity->foto
-                ?: asset("storage/profile.jpg")
+                ? url('public/Image/'. $profileEntity->foto)
+                : asset("storage/profile.jpg")
             : asset("storage/profile.jpg")
         }}" alt="Imagem de capa do card
         ">
+    </div>
+    <div class="d-flex justify-content-center">
+        <input type="file" class="form-control" id="profile" name="profile">
     </div>
     <div class="form-group row">
         <div class="col-md-3 mt-3 mb-3 form-floating">
