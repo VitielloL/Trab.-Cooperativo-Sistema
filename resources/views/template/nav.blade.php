@@ -6,6 +6,7 @@
     <title>Job Free</title>
     @vite([
             'resources/css/app.css',
+            'resources/css/profile.css',
             'resources/js/app.js',
             'resources/css/bootstrap/bootstrap.min.css',
             'resources/adminLTE/css/adminlte.min.css',
