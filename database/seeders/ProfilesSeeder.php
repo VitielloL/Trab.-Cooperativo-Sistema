@@ -23,7 +23,7 @@ class ProfilesSeeder extends Seeder
             'numero' => '108',
             'complemento' => 'casa 2',
             'celular' => '21968834048',
-            'foto' => 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Bill_Gates_2017_%28cropped%29.jpg'
+            'foto' => null
         ]);
     }
 }

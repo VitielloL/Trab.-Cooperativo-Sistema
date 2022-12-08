@@ -42,7 +42,7 @@ class ProfileController extends Controller
         $newValues['user_id'] = $idUser;
 
         if($request->file('profile')) {
-            $newValues['foto'] = $this->imageService->execute(($request->file('profile')));
+            $newValues['foto'] = $this->imageService->execute(($request->file('profile')), 'profile');
         }
 
         $newProperty = new Profile($newValues);
@@ -57,7 +57,7 @@ class ProfileController extends Controller
         $newValues = $request->except('_token');
 
         if($request->file('profile')) {
-            $newValues['foto'] = $this->imageService->execute(($request->file('profile')));
+            $newValues['foto'] = $this->imageService->execute(($request->file('profile')), 'profile');
         }
 
         $profileEntity = $this->profileRepository->findByUserId($idUser);

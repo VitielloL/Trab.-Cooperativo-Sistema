@@ -32,7 +32,7 @@
                 <img  class="img-profile" src="
                 {{ $jobEntity
                     ? $jobEntity->user->profile->foto
-                        ? url('public/Image/'. $jobEntity->user->profile->foto)
+                        ? url('public/image/profile/'. $jobEntity->user->profile->foto)
                         : asset("storage/profile.jpg")
                     : asset("storage/profile.jpg")
                 }}" alt="Imagem de capa do card

@@ -7,7 +7,7 @@
         <img  class="img-profile" src="
         {{ $profileEntity
             ? $profileEntity->foto
-                ? url('public/Image/'. $profileEntity->foto)
+                ? url('public/image/profile/'. $profileEntity->foto)
                 : asset("storage/profile.jpg")
             : asset("storage/profile.jpg")
         }}" alt="Imagem de capa do card
