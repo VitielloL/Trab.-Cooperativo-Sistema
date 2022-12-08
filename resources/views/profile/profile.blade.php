@@ -13,9 +13,7 @@
         }}" alt="Imagem de capa do card
         ">
     </div>
-    <div class="d-flex justify-content-center">
-        <input type="file" class="form-control" id="profile" name="profile">
-    </div>
+    <input type="file" class="form-control mt-3" id="profile" name="profile">
     <div class="form-group row">
         <div class="col-md-3 mt-3 mb-3 form-floating">
             <input type="text" class="form-control" id="profissao" name="profissao" placeholder="Digite seu cargo atual ou profissão" value="{{ $profileEntity ? $profileEntity->profissao : '' }}">
@@ -60,6 +58,10 @@
         <div class="col-md-3 mt-3 mb-3 form-floating">
             <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Digite seu complemento" value="{{ $profileEntity ? $profileEntity->complemento : '' }}">
             <label for="complemento" class="form-label text-secondary">Digite seu complemento</label>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 form-floating">
+            <input type="text" class="form-control" id="celular" name="celular" placeholder="Digite seu complemento" value="{{ $profileEntity ? $profileEntity->celular : '' }}">
+            <label for="complemento" class="form-label text-secondary">Digite o numero do seu celular para contato</label>
         </div>
     </div>
     <button type="submit" class="w-100 mb-1 btn btn-primary btn-lg fst-italic">

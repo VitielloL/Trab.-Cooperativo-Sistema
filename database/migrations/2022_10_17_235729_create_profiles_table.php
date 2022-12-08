@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('logradouro')->nullable(false);
             $table->string('numero')->nullable(false);
             $table->string('complemento')->nullable();
+            $table->string('celular')->nullable();
             $table->string('foto')->nullable();
         });
     }

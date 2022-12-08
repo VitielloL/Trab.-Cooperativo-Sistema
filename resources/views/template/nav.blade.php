@@ -28,9 +28,9 @@
 <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
     <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
+    {{-- <div class="preloader flex-column justify-content-center align-items-center">
         <img class="animation__wobble img-circle elevation-3" src={{asset("storage/logo.png")}} alt="JobFree" height="250" width="250">
-    </div>
+    </div> --}}
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-dark">

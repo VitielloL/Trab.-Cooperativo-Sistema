@@ -24,7 +24,8 @@ class Profile extends Model
         'logradouro',
         'numero',
         'complemento',
-        'foto'
+        'foto',
+        'celular'
     ];
 
     public function user(): BelongsTo

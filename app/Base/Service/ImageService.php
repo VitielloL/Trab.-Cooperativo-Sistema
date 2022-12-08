@@ -11,7 +11,7 @@ class ImageService extends Controller
     {
         $file = $uploadFile;
         $filename = '1.' . $file->getClientOriginalExtension();
-        $file->move(public_path('public/Image'), $filename);
+        $file->move(public_path('public/image'), $filename);
 
         return $filename;
     }
