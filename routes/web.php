@@ -10,6 +10,8 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/auth',[LoginController::class,'auth'])->name('auth.user');
 Route::post('/store',[LoginController::class,'store'])->name('store.user');
 Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::get('/forgotPass', [LoginController::class, 'forgotPass'])->name('forgotPass');
+Route::get('/newPass', [LoginController::class, 'newPass'])->name('newPass');
 Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {

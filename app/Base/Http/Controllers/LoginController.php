@@ -23,6 +23,16 @@ class LoginController extends Controller
         return view('login.register');
     }
 
+    public function forgotPass()
+    {
+        return view('login.forgotPass');
+    }
+
+    public function newPass()
+    {
+        return view('login.newPass');
+    }
+
     public function auth(Request $request)
     {
         $this->validate($request,[

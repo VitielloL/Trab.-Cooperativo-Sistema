@@ -44,8 +44,9 @@
                     </button>
                 </form>
 
-                <div class="d-flex justify-content-center align-itens-center mb-3">
+                <div class="d-flex justify-content-around align-itens-center mb-3">
                     <a class="text-decoration-none" style="color:rgb(421, 77, 31);" href="{{route('register')}}"><h5><i>Cadastre-se</i></h5></a>
+                    <a class="text-decoration-none" style="color:rgb(421, 77, 31);" href="{{route('forgotPass')}}"><h5><i>Esqueceu sua senha?</i></h5></a>
                 </div>
             </div>
         </div>
