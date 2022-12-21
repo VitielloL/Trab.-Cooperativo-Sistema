@@ -197,6 +197,8 @@ return [
         \App\Profile\Providers\ProfileServiceProvider::class,
         \App\Job\Providers\JobServiceProvider::class,
         \App\Job\Providers\JobTypeServiceProvider::class,
+        \App\Job\Providers\JobTypeServiceProvider::class,
+        \App\Base\Providers\UserServiceProvider::class
 
     ],
 
